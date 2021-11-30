@@ -1,3 +1,4 @@
 ignore.gitignore
 file_to_ignore.txt
 this is to be ignored
+.Rproj.user

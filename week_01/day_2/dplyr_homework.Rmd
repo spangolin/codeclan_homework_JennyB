@@ -1,0 +1,30 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+drinks_content
+```
+
+Q1 18 columns, drink types, size, nutrition
+```{r}
+View(drinks_content)
+```
+
+```{r}
+summary(drinks_content)
+```
+Q2 Error in select
+```{r}
+select(drinks_content, Beverage_category, Beverege, Beverege_prep, Calories)
+```
+```{r}
+mutate(drinks_content, Calories = is.na(Calories))
+```
+
+Q3
+```{r}
+
+```
+
