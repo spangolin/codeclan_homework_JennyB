@@ -7,7 +7,7 @@ output: html_notebook
 drinks_content
 ```
 
-Q1 18 columns, drink types, size, nutrition
+Q1 
 ```{r}
 View(drinks_content)
 ```
@@ -15,16 +15,66 @@ View(drinks_content)
 ```{r}
 summary(drinks_content)
 ```
-Q2 Error in select
+``
 ```{r}
-select(drinks_content, Beverage_category, Beverege, Beverege_prep, Calories)
+names(drinks_content)
 ```
+
+
+Q2
+```{r}
+library(tidyverse)
+```
+```{r}
+library(CodeClanData)
+```
+```{r}
+drinks_content
+```
+```{r}
+select(drinks_content, Beverage_category, Beverage, Beverage_prep, Calories)
+```
+Q2
 ```{r}
 mutate(drinks_content, Calories = is.na(Calories))
 ```
 
 Q3
 ```{r}
+mutate(drinks_content, calorie_diff = Calories - 135)
+```
+
+Q4.
+```{r}
+summarise(drinks_content, beverage_category = mean(Calories))
+```
+
+tried to show mean calories, but did not 
+```{r}
+category_grouped <- group_by(drinks_content, Beverage_category, Calories, mean(Calories))
+summarise(category_grouped, mean(Calories))
 
 ```
+
+```{r}
+arrange(drinks_content, Calories)
+```
+
+```{r}
+arrange(drinks_content, desc(Calories))
+```
+
+Q5
+```{r}
+
+```
+
+Q6
+```{r}
+
+```
+
+
+Q7 Short brewed coffee
+
 
